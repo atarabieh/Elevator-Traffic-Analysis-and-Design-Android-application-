@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="@color/backgroundcolor"
+        android:text="X"
+        android:layout_gravity="end"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/circlebackground"
+        />
+
+    <TextView
+        android:layout_marginTop="-25dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textColor="@color/orange"
+        android:text="Elevator Specifications"
+        android:layout_gravity="center_horizontal"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/test"
+        />
+    <ScrollView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scroll"
+        android:scrollbarSize="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="5dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Door Opening Time (s)"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/tdo"
+                    android:inputType="numberDecimal"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+
+                <EditText
+                    android:id="@+id/tdc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:hint="Door Closing Time (s)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/backgroundcolor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Rated Speed (Set 0 if not Specified)"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/ratedvelocity"
+                    android:inputType="numberDecimal"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Rated Acceleration"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/acc"
+                    android:inputType="numberDecimal"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Rated Jerk"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/jerk"
+                    android:inputType="numberDecimal"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        </ScrollView>
+
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Save"
+        android:textColor="@color/backgroundcolor"
+        app:sub_btn_background="@color/colorPrimary"
+        app:sub_btn_duration="1500"
+        app:sub_btn_line_color="@color/orange"
+        app:sub_btn_ripple_color="@color/green"
+        app:sub_btn_tick_color="@color/white"
+        android:id="@+id/elevatorSave"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-20dp"
+        android:clickable="true"
+
+
+        />
+
+
+
+
+</LinearLayout>

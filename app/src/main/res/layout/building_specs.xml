@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="5dp"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/txtclosebuild"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="@color/backgroundcolor"
+        android:text="X"
+        android:layout_gravity="end"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/circlebackground"
+        />
+    <TextView
+        android:layout_marginTop="-25dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textColor="@color/orange"
+        android:text="Building Specifications"
+        android:layout_gravity="center_horizontal"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+    <ScrollView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scroll"
+        android:scrollbarSize="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="5dp"
+                >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_marginLeft="5dp"
+                    android:fadeScrollbars="false"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarThumbVertical="@drawable/scroll"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/height"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="Building Height (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/height"
+                            android:text="Swipe for unequal floor heights"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button"
+                            android:id="@+id/textt"/>
+                        <EditText
+                            android:id="@+id/entrance1h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="1st Entrance (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/textt"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/entrance2h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="2nd Entrance (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/entrance1h"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/entrance3h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="3rd Entrance (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/entrance2h"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/entrance4h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="4th Entrance (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/entrance3h"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/firsth"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="1st Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/entrance4h"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/secondh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="2nd Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/firsth"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/thirdh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="3rd Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/secondh"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/fourthh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="4th Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/thirdh"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/fifthh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="5th Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/fourthh"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/sixthh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="6th Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/fifthh"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/seventhh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="7th Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/sixthh"
+                            android:layout_marginLeft="5dp"/>
+                        <EditText
+                            android:id="@+id/eighthh"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:hint="8th Floor (m)"
+                            android:digits="0123456789."
+                            android:textColor="@color/backgroundcolor"
+                            android:textColorHint="@color/backgroundcolor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@id/seventhh"
+                            android:layout_marginLeft="5dp"/>
+
+
+
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="20dp"
+                >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fadeScrollbars="false"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarThumbVertical="@drawable/scroll"
+
+                    >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Number of Entrance Floors"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/Noe"
+                    android:digits="0123456789"
+                    android:textColorHint="@color/backgroundcolor"
+                    />
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Noe"
+                    android:text="Swipe to set the weight of each entrance"
+                    android:textColor="@color/blue"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button"
+                    android:id="@+id/texedit"/>
+                <EditText
+                    android:id="@+id/entrance1w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:hint="1st Entrance (%)"
+                    android:digits="0123456789."
+                    android:textColor="@color/backgroundcolor"
+                    android:textColorHint="@color/backgroundcolor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/texedit"
+                    android:layout_marginLeft="15dp"/>
+                <EditText
+                    android:id="@+id/entrance2w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:hint="2nd Entrance (%)"
+                    android:digits="0123456789."
+                    android:textColor="@color/backgroundcolor"
+                    android:textColorHint="@color/backgroundcolor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/entrance1w"
+                    android:layout_marginLeft="5dp"/>
+                <EditText
+                    android:id="@+id/entrance3w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:hint="3rd Entrance (%)"
+                    android:digits="0123456789."
+                    android:textColor="@color/backgroundcolor"
+                    android:textColorHint="@color/backgroundcolor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/entrance2w"
+                    android:layout_marginLeft="5dp"/>
+                <EditText
+                    android:id="@+id/entrance4w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:hint="4th Entrance (%)"
+                    android:digits="0123456789."
+                    android:textColor="@color/backgroundcolor"
+                    android:textColorHint="@color/backgroundcolor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/entrance3w"/>
+                </RelativeLayout>
+                </HorizontalScrollView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Number of Occupant Floors"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/Nof"
+                    android:inputType="number"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Target Interval (s)"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/INT"
+                    android:inputType="numberDecimal"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/backgroundcolor"
+                app:hintAnimationEnabled="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:layout_marginTop="17dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Number of Trials"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundcolor"
+                    android:id="@+id/trials"
+                    android:inputType="number"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Save"
+        android:textColor="@color/backgroundcolor"
+        app:sub_btn_background="@color/colorPrimary"
+        app:sub_btn_duration="1500"
+        app:sub_btn_line_color="@color/orange"
+        app:sub_btn_ripple_color="@color/green"
+        app:sub_btn_tick_color="@color/white"
+        android:id="@+id/buildingSave"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-20dp"
+        />
+
+
+</LinearLayout>

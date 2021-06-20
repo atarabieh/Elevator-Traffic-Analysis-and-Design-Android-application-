@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ERTTC</string>
+    <string name="Title">Elevator Traffic Analysis and Design</string>
+    <string name="info">This application is a tool that provides the analysis and design of elevator systems in order to deal with
+the passenger traffic flow in buildings. The calculations and analysis are based on the Monte Carlo Simulation Method, which gives the ability to analise simple and complicated systems (i.e. multiple entrances, mixed traffic, and unequal floor heights and population).\n \nFor any further information please contact us on: atarabieh@outlook.com </string>
+    <string name="Title2">Based on Monte Carlo Simulation</string>
+</resources>
